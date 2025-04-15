@@ -42,7 +42,7 @@ async function fetchMovieData() {
     }
 
     // Constructing the API URL with the search value
-    const API = `http://www.omdbapi.com/?t=${searchValue}&apikey=54bdaf70`;
+    const API = `https://www.omdbapi.com/?t=${encodeURIComponent(searchValue)}&apikey=54bdaf70`;
 
     // Fetching data from the API
     const response = await fetch(API);
@@ -78,7 +78,7 @@ async function fetchMovieData() {
             <div class="text-gray-400">Box-office Collection: <span class="text-gray-200">${data.BoxOffice}</span></div>
             <div class="text-gray-400">Released on: <span class="text-gray-200">${data.Released}</span></div>
             <div class="text-gray-400">Runtime: <span class="text-gray-200">${data.Runtime}</span></div>
-            <div class="text-gray-400 min-[695px]:hidden">IMDb Rating: <span class="text-gray-200">${data.imdbRating}(${data.imdbVotes})</span></div>
+            <div class="text-gray-400 min-[695px]:hidden">IMDb Rating: <span class="text-gray-200">${data.imdbRating} (${data.imdbVotes})</span></div>
           </div>
           <div id="rating" class="w-full md:w-2/3 h-28 flex justify-around md:justify-between items-center max-[695px]:hidden"></div>
         </div>
