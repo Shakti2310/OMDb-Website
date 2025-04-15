@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata and linking stylesheets -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>OMDb</title>
+  <script src="script.js" defer></script> <!-- Linking the JavaScript file -->
+</head>
+
+<body class="h-screen w-screen flex flex-col relative">
+  <!-- Upper section of the page (background image) -->
+  <section id="upper-section" class="bg-[url('./images/bg.jpg')] bg-cover bg-center flex-[4] md:flex-1 transition-all duration-1500 ease-in-out"></section>
+
+  <!-- Lower section of the page (content area) -->
+  <center id="lower-section" class="bg-downSection flex-[6] md:flex-1 flex items-center justify-center pr-7 pl-7 lg:pr-24 lg:pl-24 transition-all duration-1500 ease-in-out"></center>
+
+  <!-- Search section (centered input and button) -->
+  <div id="search-section" class="absolute md:inset-0 inset-x-0 top-[36%] flex items-center justify-center transition-all duration-1500 ease-in-out"> 
+    <div class="relative w-5/6 md:w-3/5 lg:w-2/5">
+      <!-- Search icon -->
+      <img src="./images/search.png" alt="Search Icon"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 filter invert">
+      <!-- Search input field -->
+      <input id="search-input" type="text" placeholder="Search Movie"
+        class="p-4 pl-14 rounded-xl shadow-2xl bg-inputBar w-full text-white outline-none">
+      <!-- Submit button -->
+      <button type="submit"
+        class="absolute right-7 top-1/4 bg-green-500 rounded-xl cursor-pointer text-white font-semibold font-poppins h-7 w-14 text-sm">Enter</button>
+    </div>
+  </div>
+</body>
+
+</html>
